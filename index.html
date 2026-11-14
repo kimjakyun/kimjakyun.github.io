@@ -66,6 +66,7 @@
     .logo { font-size: 22px; font-weight: 800; color: #0284c7; text-decoration: none; }
     .call-btn { background: #0284c7; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; text-decoration: none; }
     .hero { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 36px var(--gutter); text-align: center; }
+    .hero-inner { max-width: 720px; margin: 0 auto; }
     .banner-container { margin: 0 auto 20px; max-width: 260px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.25); border: 3px solid rgba(255,255,255,0.4); }
     .banner-container img { width: 100%; height: auto; display: block; }
     .hero-badge { display: inline-block; background: #0369a1; border: 1px solid #38bdf8; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 14px; color: #e0f2fe; }
@@ -95,9 +96,12 @@
     .footer { background: #0f172a; color: #94a3b8; padding: 28px var(--gutter); font-size: 12px; text-align: center; }
     @media (min-width: 768px) {
       body { background-color: #e6f3fb; }
-      .hero h1 { font-size: 32px; }
+      .hero-inner { display: flex; align-items: center; gap: 36px; text-align: left; }
+      .hero-text { flex: 1 1 auto; min-width: 0; }
+      .banner-container { flex: 0 0 210px; max-width: 210px; margin: 0; }
+      .cta-group { justify-content: flex-start; }
+      .hero h1 { font-size: 30px; }
       .hero p { font-size: 16px; }
-      .banner-container { max-width: 320px; }
       .section-title { font-size: 24px; }
     }
     .footer p { margin-bottom: 6px; }
@@ -111,15 +115,19 @@
   </header>
 
   <section class="hero">
-    <div class="banner-container">
-      <img src="images/banner.jpg" alt="반짝반짝홈케어 에어컨 분해청소 전문 공식 배너">
-    </div>
-    <div class="hero-badge">대전·세종 에어컨·냉난방기 분해세척 출장 전문</div>
-    <h1>국가공인 1급 기술자 대표<br><span>100% 직접 책임 시공</span></h1>
-    <p>100bar 초고압 직수 관통 세척 · 친환경 안심 세제<br>피톤치드 연막 살균 무료 · 하루 4가구 한정 집중 케어</p>
-    <div class="cta-group">
-      <a href="tel:010-3430-6000" class="btn-primary">📞 전화 바로 상담</a>
-      <a href="https://m.place.naver.com/place/2047663721" class="btn-secondary" target="_blank">🟢 네이버 예약</a>
+    <div class="hero-inner">
+      <div class="banner-container">
+        <img src="images/banner.jpg" alt="반짝반짝홈케어 에어컨 분해청소 전문 공식 배너">
+      </div>
+      <div class="hero-text">
+        <div class="hero-badge">대전·세종 에어컨·냉난방기 분해세척 출장 전문</div>
+        <h1>국가공인 1급 기술자 대표<br><span>100% 직접 책임 시공</span></h1>
+        <p>100bar 초고압 직수 관통 세척 · 친환경 안심 세제<br>피톤치드 연막 살균 무료 · 하루 4가구 한정 집중 케어</p>
+        <div class="cta-group">
+          <a href="tel:010-3430-6000" class="btn-primary">📞 전화 바로 상담</a>
+          <a href="https://m.place.naver.com/place/2047663721" class="btn-secondary" target="_blank">🟢 네이버 예약</a>
+        </div>
+      </div>
     </div>
   </section>
 
