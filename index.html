@@ -105,6 +105,16 @@
       .section-title { font-size: 24px; }
     }
     .footer p { margin-bottom: 6px; }
+    .care-box { background:#f4f9fd; border:1px solid #cfe3f5; border-radius:12px; padding:18px 16px; box-shadow:0 2px 8px rgba(2,132,199,0.05); }
+    .care-row { display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+    .care-chip { background:#ffffff; border:1px solid #cfe3f5; color:#0f2f52; font-weight:800; font-size:14px; padding:8px 14px; border-radius:8px; }
+    .care-arrow { font-size:11px; font-weight:800; color:#ffffff; background:#1b5f9c; padding:3px 10px; border-radius:999px; }
+    .care-list { list-style:none; margin:0 0 16px; padding:0; font-size:13.5px; color:#42607d; line-height:1.85; }
+    .care-list li { position:relative; padding-left:16px; }
+    .care-list li::before { content:"·"; position:absolute; left:4px; color:#1b5f9c; font-weight:800; }
+    .care-list b { color:#0f2f52; }
+    .care-btn { display:block; background:#0f2f52; color:#ffffff; text-align:center; font-weight:800; font-size:15px; padding:15px 12px; border-radius:10px; text-decoration:none; box-shadow:0 6px 16px rgba(14,47,82,0.18); }
+    .footer a { color:#cbd5e1; text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -207,6 +217,24 @@
   </section>
 
   <section class="section" style="background:#ffffff;">
+    <h2 class="section-title">매장 연간 정기관리</h2>
+    <p class="section-sub">식당·카페·학원·유치원·사무실 · 여름 가동 전 4~5월 / 겨울 난방 전 10~11월</p>
+    <div class="care-box">
+      <div class="care-row">
+        <span class="care-chip">1차 4~5월</span>
+        <span class="care-arrow">약 6개월 주기</span>
+        <span class="care-chip">2차 10~11월</span>
+      </div>
+      <ul class="care-list">
+        <li>정기계약 시 <b>대당 1~2만 원 우대 할인</b></li>
+        <li><b>6개월 주기 사전 점검</b> 연락 · 성수기 우선 예약</li>
+        <li>증빙 발행 안내 (간이·현금영수증·세금계산서)</li>
+      </ul>
+      <a class="care-btn" href="care.html">📝 연간 정기관리 제안서 · 신청서 보기</a>
+    </div>
+  </section>
+
+  <section class="section">
     <h2 class="section-title">출장 가능 권역</h2>
     <p class="section-sub">대전 전지역 · 세종 전지역 · 공주 · 계룡 출장</p>
     <div style="background:#f0f9ff; padding:18px; border-radius:12px; border:1px solid #bae6fd; font-size:14px; text-align:center; box-shadow: 0 2px 8px rgba(2,132,199,0.05);">
@@ -220,6 +248,7 @@
     <p><strong>반짝반짝홈케어</strong> | 대표: 김자균</p>
     <p>사업장 소재지: 대전광역시 유성구 덕명서로2번길 7-8 401호</p>
     <p>예약 및 고객센터: 010-3430-6000</p>
+    <p><a href="care.html">매장 에어컨 연간 정기관리 제안서 · 신청서</a></p>
     <p>© 반짝반짝홈케어 All Rights Reserved.</p>
   </footer>
 
