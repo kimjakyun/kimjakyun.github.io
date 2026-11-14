@@ -53,18 +53,19 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "스탠드 에어컨 분해 세척" }, "price": "120000", "priceCurrency": "KRW" },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "벽걸이 에어컨 분해 세척" }, "price": "80000", "priceCurrency": "KRW" },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "천장형 시스템에어컨 1way 세척" }, "price": "100000", "priceCurrency": "KRW" },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "천장형 시스템에어컨 4way 세척" }, "price": "130000", "priceCurrency": "KRW" }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "천장형 시스템에어컨 4way 세척" }, "price": "150000", "priceCurrency": "KRW" }
       ]
     }
   }
   </script>
   <style>
+    :root { --gutter: max(20px, calc(50% - 360px)); }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
     body { background-color: #f0f9ff; color: #1e293b; line-height: 1.6; padding-bottom: 90px; }
-    .header { background: #ffffff; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #bae6fd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(2,132,199,0.06); }
+    .header { background: #ffffff; padding: 16px var(--gutter); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #bae6fd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(2,132,199,0.06); }
     .logo { font-size: 22px; font-weight: 800; color: #0284c7; text-decoration: none; }
     .call-btn { background: #0284c7; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 700; text-decoration: none; }
-    .hero { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 36px 20px; text-align: center; }
+    .hero { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 36px var(--gutter); text-align: center; }
     .banner-container { margin: 0 auto 20px; max-width: 260px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.25); border: 3px solid rgba(255,255,255,0.4); }
     .banner-container img { width: 100%; height: auto; display: block; }
     .hero-badge { display: inline-block; background: #0369a1; border: 1px solid #38bdf8; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 14px; color: #e0f2fe; }
@@ -74,7 +75,7 @@
     .cta-group { display: flex; gap: 10px; justify-content: center; }
     .btn-primary { background: #38bdf8; color: #0c4a6e; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; flex: 1; max-width: 170px; font-size: 15px; text-align: center; }
     .btn-secondary { background: #ffffff; color: #0284c7; padding: 14px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; flex: 1; max-width: 170px; font-size: 15px; text-align: center; }
-    .section { padding: 32px 20px; }
+    .section { padding: 32px var(--gutter); }
     .section-title { font-size: 21px; font-weight: 800; margin-bottom: 8px; color: #0f172a; text-align: center; }
     .section-sub { font-size: 14px; color: #64748b; margin-bottom: 24px; text-align: center; }
     .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -87,11 +88,18 @@
     .price-val { color: #0284c7; font-weight: 800; font-size: 16px; }
     .price-body { padding: 12px 16px; font-size: 13px; color: #475569; }
     .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
-    .gallery-img { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; border: 2px solid #bae6fd; }
-    .floating-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; padding: 12px 20px; display: flex; gap: 10px; border-top: 1px solid #bae6fd; z-index: 200; box-shadow: 0 -4px 12px rgba(2,132,199,0.1); }
+    .gallery-img { width: 100%; aspect-ratio: 3 / 4; height: auto; object-fit: cover; border-radius: 8px; border: 2px solid #bae6fd; }
+    .floating-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; padding: 12px var(--gutter); display: flex; gap: 10px; border-top: 1px solid #bae6fd; z-index: 200; box-shadow: 0 -4px 12px rgba(2,132,199,0.1); }
     .float-call { flex: 1; background: #0284c7; color: #ffffff; padding: 14px; border-radius: 8px; font-weight: 800; text-align: center; text-decoration: none; font-size: 15px; }
     .float-naver { flex: 1; background: #03c75a; color: #ffffff; padding: 14px; border-radius: 8px; font-weight: 800; text-align: center; text-decoration: none; font-size: 15px; }
-    .footer { background: #0f172a; color: #94a3b8; padding: 28px 20px; font-size: 12px; text-align: center; }
+    .footer { background: #0f172a; color: #94a3b8; padding: 28px var(--gutter); font-size: 12px; text-align: center; }
+    @media (min-width: 768px) {
+      body { background-color: #e6f3fb; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .banner-container { max-width: 320px; }
+      .section-title { font-size: 24px; }
+    }
     .footer p { margin-bottom: 6px; }
   </style>
 </head>
@@ -184,7 +192,7 @@
     <div class="price-card">
       <div class="price-header">
         <span>천장형 시스템에어컨 (1way / 4way)</span>
-        <span class="price-val">10만 원~ / 13만 원~</span>
+        <span class="price-val">10만 원~ / 15만 원</span>
       </div>
       <div class="price-body">신축 아파트 공사 분진 제거 및 상가·학원·병원 정기 케어</div>
     </div>
