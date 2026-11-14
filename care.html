@@ -576,6 +576,19 @@
     return lines.join('\n');
   }
 
+  function compactMessage(){
+    var seasons = [];
+    if(s1.checked) seasons.push('4~5월');
+    if(s2.checked) seasons.push('10~11월');
+    return [
+      '[반짝반짝홈케어 정기관리 신청]',
+      '매장명: ' + store.value.trim(),
+      '연락처: ' + tel.value.trim(),
+      '기종·대수: ' + (model.value.trim() || '상담 시 확인'),
+      '희망 시기: ' + (seasons.length ? seasons.join(' / ') : '상담 후 결정')
+    ].join('\n');
+  }
+
   function isIOS(){
     var ua = navigator.userAgent || '';
     if(/iPhone|iPad|iPod/i.test(ua)) return true;
@@ -596,12 +609,13 @@
   $('btnSms').addEventListener('click', function(){
     if(!validate()) return;
     var msg = buildMessage();
-    if(msg.length > 900){
-      // 문자 URL 길이 제한 회피: 핵심만 남긴다
-      msg = msg.split('\n').slice(0, 6).join('\n') + '\n· 신청일시: ' + stamp();
+    var url = smsHref(msg);
+    if(url.length > 1500){
+      // 문자앱이 긴 URL을 잘라버리는 기종을 위해 핵심 항목만 담은 짧은 본문으로 대체
+      msg = compactMessage();
+      url = smsHref(msg);
     }
     showPreview(msg);
-    var url = smsHref(msg);
     var again = $('smsAgain');
     again.setAttribute('href', url);
     again.classList.add('show');
