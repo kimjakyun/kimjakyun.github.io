@@ -283,6 +283,8 @@
   }
   .preview.show{display:block}
   .preview b{display:block;font-size:11px;color:var(--sub);margin-bottom:5px;font-weight:800}
+  .sms-again{display:none;margin-top:10px;text-align:center;font-size:12px;font-weight:800;color:var(--navy-2);text-decoration:underline}
+  .sms-again.show{display:block}
 
   /* ── 푸터 ── */
   footer{
@@ -473,7 +475,7 @@
 
       <p class="btn-note">보내는 곳 <b>010-3430-6000</b> · 카톡으로 답장하실 분은 복사 후 붙여넣어 주세요.</p>
 
-      <div class="preview" id="preview"><b>보낼 내용 미리보기</b><span id="previewText"></span></div>
+      <div class="preview" id="preview"><b>보낼 내용 미리보기</b><span id="previewText"></span><a class="sms-again" id="smsAgain">문자앱이 자동으로 열리지 않으면 여기를 눌러 다시 시도하세요</a></div>
     </div>
   </section>
 
@@ -600,6 +602,9 @@
     }
     showPreview(msg);
     var url = smsHref(msg);
+    var again = $('smsAgain');
+    again.setAttribute('href', url);
+    again.classList.add('show');
     try{
       window.location.href = url;
       toast('문자앱으로 이동합니다. 그대로 보내주세요.', 3200);
