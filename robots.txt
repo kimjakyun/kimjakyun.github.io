@@ -4,4 +4,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://kimjakyun.github.io/sitemap.xml
+Sitemap: https://xn--vk1bx9yg7cgdn6juyjg7d.kr/sitemap.xml
