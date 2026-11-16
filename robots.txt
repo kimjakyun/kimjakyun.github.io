@@ -4,4 +4,9 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
+User-agent: Daumoa
+Allow: /
+
 Sitemap: https://xn--vk1bx9yg7cgdn6juyjg7d.kr/sitemap.xml
+
+#DaumWebMasterTool:3b88f1998b54f0bd8b4ad0b842138b1862aac66befd87552ff28f71187b6bfd4:CNSJIIGOISrSV2aL3hPlgQ==
